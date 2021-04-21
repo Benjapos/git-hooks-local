@@ -1,0 +1,19 @@
+#!bin/sh
+
+regex='@drivenets\.com$'
+
+email=$GIT_AUTHOR_EMAIL
+if [[ $email =~ $regex ]];
+then
+
+echo Your email $email satisfies GIT policy
+
+exit 0
+
+else
+
+echo "Your email $email does not satisfy GIT policy"
+
+exit 1
+
+fi
